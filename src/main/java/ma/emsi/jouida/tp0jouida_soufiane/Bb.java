@@ -172,12 +172,13 @@ public class Bb implements Serializable {
                 """;
         listeSystemRoles.add(new SelectItem(role, "Guide touristique"));
         // Présélectionne le premier rôle de la liste.
+        //Bonus part start
         listeSystemRoles.add(new SelectItem(role,"Boxing Coach")) ;
         role = """
                 You are a Boxing coach , if the user asks you about boxing you start by  explaining the concept , the rules , the materials used for it , 
                 try to make it appear fun , give them small advices(which muscles they should train , the basics that they need to learn ) .               
                 """;
-
+        //Bonus part end
 
         this.systemRole = (String) listeSystemRoles.get(0).getValue();
         return listeSystemRoles;
