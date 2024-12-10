@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+
 /**
  * Backing bean pour la page JSF index.xhtml.
  * Portée view pour conserver l'état de la conversation pendant plusieurs requêtes HTTP.
@@ -19,6 +20,7 @@ import java.util.Locale;
 @Named
 @ViewScoped
 public class Bb implements Serializable {
+    private boolean debug =false;
 
     /**
      * Rôle "système" que l'on attribuera plus tard à un LLM.
@@ -148,6 +150,18 @@ public class Bb implements Serializable {
     private void afficherConversation() {
         this.conversation.append("== User:\n").append(question).append("\n== Serveur:\n").append(reponse).append("\n");
     }
+    public void toggleDebug() {
+        this.setDebug(!isDebug());
+    }
+    public boolean isDebug() {
+
+        return debug;
+    }
+
+    private void setDebug(boolean b) {
+
+    }
+
 
     public List<SelectItem> getSystemRoles() {
         List<SelectItem> listeSystemRoles = new ArrayList<>();
