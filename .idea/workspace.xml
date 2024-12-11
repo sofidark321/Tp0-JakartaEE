@@ -9,11 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3ef2840-f41e-45bf-b9ca-6633f57b9361" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/mycsslayout.css" afterDir="false" />
+    <list default="true" id="b3ef2840-f41e-45bf-b9ca-6633f57b9361" name="Changes" comment="ajout des commentaires pour start of end of bonus part">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ma/emsi/jouida/tp0jouida_soufiane/Bb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/emsi/jouida/tp0jouida_soufiane/Bb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,11 +81,14 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "settings.json.schema.catalog",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ma.emsi.jouida.tp0jouida_soufiane" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\jouida\Documents\jakarta EE\TP0-JOUIDA_Soufiane\src\main\webapp\resources\js" />
       <recent name="D:\jouida\Documents\jakarta EE\TP0-JOUIDA_Soufiane\src\main\webapp\resources\css" />
@@ -171,7 +174,8 @@
       <workItem from="1733827597068" duration="1267000" />
       <workItem from="1733828867637" duration="2538000" />
       <workItem from="1733836559617" duration="290000" />
-      <workItem from="1733836870168" duration="6719000" />
+      <workItem from="1733836870168" duration="6925000" />
+      <workItem from="1733902747298" duration="6386000" />
     </task>
     <servers />
   </component>

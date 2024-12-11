@@ -21,6 +21,9 @@ import java.util.Locale;
 @ViewScoped
 public class Bb implements Serializable {
     private boolean debug =false;
+    private String texteRequeteJson;
+    private String texteReponseJson;
+
 
     /**
      * Rôle "système" que l'on attribuera plus tard à un LLM.
@@ -51,6 +54,9 @@ public class Bb implements Serializable {
      */
     @Inject
     private FacesContext facesContext;
+
+    @Inject
+    private JsonUtilPourGemini jsonUtilPourGemini;
 
     /**
      * Obligatoire pour un bean CDI (classe gérée par CDI).
@@ -115,6 +121,19 @@ public class Bb implements Serializable {
                     "Texte question vide", "Il manque le texte de la question");
             facesContext.addMessage(null, message);
             return null;
+        }
+        try {
+
+            LlmInteraction interaction = jsonUtilPourGemini.envoyerRequete(question);
+            this.reponse = interaction.reponseExtraite();
+            this.texteRequeteJson = interaction.questionJson();
+            this.texteReponseJson = interaction.reponseJson();
+        } catch (Exception e) {
+            FacesMessage message =
+                    new FacesMessage(FacesMessage.SEVERITY_ERROR,
+                            "Problème de connexion avec l'API du LLM",
+                            "Problème de connexion avec l'API du LLM" + e.getMessage());
+            facesContext.addMessage(null, message);
         }
         // Entourer la réponse avec "||".
         this.reponse = "||";
