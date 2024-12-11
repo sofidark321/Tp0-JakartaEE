@@ -36,7 +36,7 @@ public class LlmClientPourGemini implements Serializable {
         // Client REST pour envoyer des requêtes vers les endpoints de l'API de Gemini
         this.clientRest = ClientBuilder.newClient();
         // Endpoint REST pour envoyer la question à l'API.
-        this.target = clientRest.target("https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key="+this.key);
+        this.target = clientRest.target("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key="+ this.key);
     }
 
     /**

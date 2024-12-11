@@ -135,17 +135,17 @@ public class Bb implements Serializable {
                             "Problème de connexion avec l'API du LLM" + e.getMessage());
             facesContext.addMessage(null, message);
         }
-        // Entourer la réponse avec "||".
-        this.reponse = "||";
-        // Si la conversation n'a pas encore commencé, ajouter le rôle système au début de la réponse
-        if (this.conversation.isEmpty()) {
-            // Ajouter le rôle système au début de la réponse
-            this.reponse += systemRole.toUpperCase(Locale.FRENCH) + "\n";
-            // Invalide le bouton pour changer le rôle système
-            this.systemRoleChangeable = false;
-        }
-        this.reponse += question.toLowerCase(Locale.FRENCH) + "||";
-        // La conversation contient l'historique des questions-réponses depuis le début.
+//        // Entourer la réponse avec "||".
+//        this.reponse = "||";
+//        // Si la conversation n'a pas encore commencé, ajouter le rôle système au début de la réponse
+//        if (this.conversation.isEmpty()) {
+//            // Ajouter le rôle système au début de la réponse
+//            this.reponse += systemRole.toUpperCase(Locale.FRENCH) + "\n";
+//            // Invalide le bouton pour changer le rôle système
+//            this.systemRoleChangeable = false;
+//        }
+//        this.reponse += question.toLowerCase(Locale.FRENCH) + "||";
+//        // La conversation contient l'historique des questions-réponses depuis le début.
         afficherConversation();
         return null;
     }
